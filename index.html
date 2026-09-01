@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>😂 Random Joke Generator</h1>
+            <p>Laugh out loud with random jokes!</p>
+        </header>
+
+        <div class="controls">
+            <select id="categorySelect" class="category-select">
+                <option value="any">All Categories</option>
+                <option value="general">General</option>
+                <option value="programming">Programming</option>
+                <option value="knock-knock">Knock-Knock</option>
+            </select>
+            <button id="generateBtn" class="btn btn-primary">Get a Joke</button>
+            <button id="favoriteBtn" class="btn btn-secondary">❤️ Add to Favorites</button>
+        </div>
+
+        <div class="joke-box">
+            <p id="jokeText" class="joke-text">Click "Get a Joke" to start laughing!</p>
+            <button id="copyBtn" class="btn btn-small">Copy Joke</button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="history">History</button>
+            <button class="tab-btn" data-tab="favorites">Favorites</button>
+        </div>
+
+        <div id="historyTab" class="tab-content active">
+            <h2>Joke History</h2>
+            <ul id="historyList" class="joke-list"></ul>
+        </div>
+
+        <div id="favoritesTab" class="tab-content">
+            <h2>Favorite Jokes</h2>
+            <ul id="favoritesList" class="joke-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
